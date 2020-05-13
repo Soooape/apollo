@@ -23,19 +23,9 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 apt-get -y update && \
     apt-get -y install \
-    libpocofoundation50 \
-    libpoco-dev \
-    ncurses-dev \
-    libuuid1 \
-    uuid-dev \
-    libboost-all-dev \
-    libxml2-dev
+    cppcheck \
+    shellcheck \
+    lcov
 
-python3 -m pip install --no-cache-dir grpcio-tools
-pip2 install --no-cache-dir grpcio-tools
-
-
-# clean up
 apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
